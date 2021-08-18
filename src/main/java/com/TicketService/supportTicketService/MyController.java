@@ -19,6 +19,7 @@ public class MyController {
 	public String greeting() throws IOException, InterruptedException {
 		
 		Connection connect =  Nats.connect("nats://localhost:4222");
+		
 		/*Dispatcher dispatcher = connect.createDispatcher(message -> {
 			System.out.println(String.format("Received Message[%s] from [%s]",
 					new String(message.getData(), StandardCharsets.UTF_8), message.getSubject()));
